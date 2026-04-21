@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sajjad Karimian | Research & Data Portfolio</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --text: #18212f;
+      --muted: #5b6575;
+      --line: #d9e0ea;
+      --accent: #1f4b99;
+      --accent-soft: #eaf1ff;
+      --shadow: 0 12px 32px rgba(23, 37, 64, 0.08);
+      --radius: 20px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, #f3f5f9 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(245, 247, 251, 0.82);
+      border-bottom: 1px solid rgba(217, 224, 234, 0.85);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 56px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 38px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 { margin: 0 0 12px; line-height: 1.18; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2rem, 3.8vw, 3.8rem); }
+    h2 { font-size: clamp(1.35rem, 2vw, 2rem); }
+    h3 { font-size: 1.05rem; }
+
+    .subtitle {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 58ch;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      box-shadow: 0 10px 20px rgba(31, 75, 153, 0.18);
+    }
+    .btn-secondary {
+      background: #fff;
+      color: var(--text);
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .highlight {
+      padding: 14px;
+      border-radius: 16px;
+      background: #f9fbff;
+      border: 1px solid var(--line);
+    }
+
+    .highlight strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-side {
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #dbe8ff, #eef4ff);
+      color: var(--accent);
+      font-size: 1.8rem;
+      font-weight: 800;
+      border: 1px solid var(--line);
+    }
+
+    .meta-list, .mini-list {
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    section {
+      padding: 14px 0 22px;
+    }
+
+    .section-card {
+      padding: 28px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .item {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fcfdff;
+    }
+
+    .kicker {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f2f6fc;
+      border: 1px solid var(--line);
+      font-size: 0.92rem;
+      color: #324154;
+    }
+
+    .pub {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+    .pub:first-child { border-top: 0; padding-top: 0; }
+
+    .footer {
+      padding: 30px 0 50px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero-main, .hero-side, .section-card { padding: 22px; }
+      .highlights { grid-template-columns: 1fr; }
+      .nav-inner { align-items: flex-start; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { gap: 10px 14px; font-size: 0.88rem; }
+      .hero { padding-top: 28px; }
+      .subtitle { font-size: 1rem; }
+      .btn { width: 100%; }
+      .hero-actions { display: grid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Sajjad Karimian</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card hero-main">
+          <div class="eyebrow">Trustworthy AI • Healthcare Data • Socio-Technical Systems</div>
+          <h1>Sajjad Karimian</h1>
+          <p class="subtitle">
+            Researcher and junior data professional working at the intersection of healthcare data,
+            trustworthy AI, ontology engineering, and socio-technical systems analysis.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="files/Sajjad_Karimian_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn btn-secondary" href="mailto:sajjad.karimian94@gmail.com">Email Me</a>
+          </div>
+          <div class="highlights">
+            <div class="highlight">
+              <strong>7+ publications</strong>
+              <span class="muted">Journal papers, conference papers, and abstracts across AI, healthcare, and socio-technical systems.</span>
+            </div>
+            <div class="highlight">
+              <strong>Healthcare focus</strong>
+              <span class="muted">Experience with hospital data systems, governance workflows, and infection prevention contexts.</span>
+            </div>
+            <div class="highlight">
+              <strong>Technical range</strong>
+              <span class="muted">Python, SQL, RDF/OWL, SPARQL, data visualization, metadata, and reproducible analysis.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card hero-side">
+          <div class="avatar">SK</div>
+          <div>
+            <h3>Current profile</h3>
+            <div class="meta-list">
+              <div>Dublin, Ireland</div>
+              <div>University College Dublin</div>
+              <div>MSc by Research in Computer Science</div>
+            </div>
+          </div>
+          <div>
+            <h3>Links</h3>
+            <div class="mini-list">
+              <a href="https://tinyurl.com/sajjadkarimian" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://tinyurl.com/sajjadgoogle" target="_blank" rel="noopener">Google Scholar</a>
+              <a href="https://orcid.org/0000-0002-9772-144X" target="_blank" rel="noopener">ORCID</a>
+              <a href="https://github.com/sajjadkarimian" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div>
+            <h3>Research themes</h3>
+            <div class="tags">
+              <span class="tag">Trustworthy AI</span>
+              <span class="tag">Healthcare Data</span>
+              <span class="tag">FAIR Metadata</span>
+              <span class="tag">Ontology Design</span>
+              <span class="tag">Data Governance</span>
+              <span class="tag">STSA / SEIPS</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container card section-card">
+        <div class="section-head">
+          <div>
+            <h2>About</h2>
+            <p class="muted">A cleaner, evidence-led profile than a generic academic homepage.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p>
+              I am a data-driven researcher focused on trustworthy AI in healthcare, with experience spanning
+              academic research, hospital data analysis, ontology engineering, and stakeholder-facing work.
+              My work examines how data flows, metadata, and socio-technical conditions shape the reliability,
+              transparency, and practical use of AI-enabled systems.
+            </p>
+            <p>
+              I have worked across university and clinical environments, including University College Dublin and
+              St. James’s Hospital, where I analysed data systems, mapped governance processes, and supported
+              data-informed decision-making in healthcare settings.
+            </p>
+          </div>
+          <div>
+            <p>
+              Methodologically, I combine Python and SQL-based data work with RDF/OWL, SPARQL, FAIR-aligned
+              metadata design, and socio-technical frameworks such as SEIPS. I am particularly interested in
+              transforming fragmented or messy real-world data into structured, interpretable, and usable forms.
+            </p>
+            <p>
+              I am open to roles and collaborations in healthcare analytics, data management, digital health,
+              and early-career research or applied data science positions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container card section-card">
+        <div class="section-head">
+          <div>
+            <h2>Research & Selected Projects</h2>
+            <p class="muted">Work grounded in healthcare data, transparency, and decision support.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <article class="item">
+            <div class="kicker">Healthcare data governance</div>
+            <h3>Hospital data governance mapping</h3>
+            <p class="muted">Mapped data lifecycles and identified governance and transparency gaps in hospital workflows.</p>
+          </article>
+          <article class="item">
+            <div class="kicker">Ontology engineering</div>
+            <h3>SEIPS-based patient data ontology</h3>
+            <p class="muted">Developed ontology structures to represent healthcare work systems, data relationships, and metadata.</p>
+          </article>
+          <article class="item">
+            <div class="kicker">Applied data science</div>
+            <h3>Forecasting and ETL projects</h3>
+            <p class="muted">Built house price and rent forecasting exercises and ETL pipelines such as Dublin bike data extraction and visualization.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container card section-card">
+        <div class="section-head">
+          <div>
+            <h2>Experience</h2>
+            <p class="muted">Research, teaching, hospital analytics, and operational IT experience.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <article class="item">
+            <div class="kicker">2024–Present</div>
+            <h3>Research Assistant, UCD</h3>
+            <ul class="list">
+              <li>Executed original research projects and contributed to academic publications.</li>
+              <li>Co-authored peer-reviewed journal and conference papers.</li>
+              <li>Worked on health data analysis and socio-technical research themes.</li>
+            </ul>
+          </article>
+          <article class="item">
+            <div class="kicker">2023–Present</div>
+            <h3>Teaching Assistant, University College Dublin</h3>
+            <ul class="list">
+              <li>Supported students across coursework and assessments.</li>
+              <li>Helped explain data science and Python-related concepts.</li>
+            </ul>
+          </article>
+          <article class="item">
+            <div class="kicker">Sep 2024–Jan 2025</div>
+            <h3>Industrial Placement, St. James’s Hospital</h3>
+            <ul class="list">
+              <li>Analysed hospital data systems and inefficiencies in clinical data flow.</li>
+              <li>Designed data governance process maps.</li>
+              <li>Supported reporting and decision-making with structured data insights.</li>
+            </ul>
+          </article>
+          <article class="item">
+            <div class="kicker">2014–2023</div>
+            <h3>IT Support & Systems Administration</h3>
+            <ul class="list">
+              <li>Managed infrastructure, user support, and operational systems across clinical and educational settings.</li>
+              <li>Worked with MySQL, Linux environments, documentation, and user support workflows.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container card section-card">
+        <div class="section-head">
+          <div>
+            <h2>Selected Publications</h2>
+            <p class="muted">A short curated list for the homepage. A full publications page can be added later.</p>
+          </div>
+        </div>
+        <div class="pub">
+          <h3>Integrating Human Factors Socio-Technical Systems Analysis in a Data Investigation in an Acute Hospital</h3>
+          <div class="muted">HEPS 2025</div>
+        </div>
+        <div class="pub">
+          <h3>Trustworthy Artificial Intelligence and Organizational Trust: A Scoping Literature Review using Socio-Technical Systems Analysis</h3>
+          <div class="muted">Journal of Ergonomics, 2025</div>
+        </div>
+        <div class="pub">
+          <h3>Measuring the Organisational Trust of Artificial Intelligence Systems in Healthcare with Socio-Technical Systems Analysis Methods</h3>
+          <div class="muted">IHFE 2024</div>
+        </div>
+        <div class="pub">
+          <h3>Imagining Better AI-Enabled Healthcare Futures: The Case for Care by Design</h3>
+          <div class="muted">CSCW 2024</div>
+        </div>
+        <div class="pub">
+          <h3>A Systematic Review of Effects of Exchanging and Sharing Medical Images Systems in a Sociotechnical Context</h3>
+          <div class="muted">Informatics in Medicine Unlocked, 2023</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container card section-card">
+        <div class="section-head">
+          <div>
+            <h2>Skills</h2>
+            <p class="muted">Balanced for both research-facing and applied data roles.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="item">
+            <h3>Technical</h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Jupyter</span>
+              <span class="tag">RDF / OWL</span>
+              <span class="tag">SPARQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Git</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Protégé</span>
+              <span class="tag">Widoco</span>
+            </div>
+          </div>
+          <div class="item">
+            <h3>Professional</h3>
+            <div class="tags">
+              <span class="tag">Communication</span>
+              <span class="tag">Stakeholder Engagement</span>
+              <span class="tag">Problem Solving</span>
+              <span class="tag">Attention to Detail</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Self-learning</span>
+              <span class="tag">Time Management</span>
+              <span class="tag">Cross-disciplinary Work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container card section-card">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">For research, collaboration, or early-career opportunities.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="item">
+            <h3>Email</h3>
+            <p><a href="mailto:sajjad.karimian94@gmail.com">sajjad.karimian94@gmail.com</a></p>
+            <h3>Phone</h3>
+            <p class="muted">+353 89 266 1264</p>
+          </div>
+          <div class="item">
+            <h3>Profiles</h3>
+            <p><a href="https://tinyurl.com/sajjadkarimian" target="_blank" rel="noopener">LinkedIn</a><br>
+            <a href="https://tinyurl.com/sajjadgoogle" target="_blank" rel="noopener">Google Scholar</a><br>
+            <a href="https://orcid.org/0000-0002-9772-144X" target="_blank" rel="noopener">ORCID</a><br>
+            <a href="https://github.com/sajjadkarimian" target="_blank" rel="noopener">GitHub</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Built as a lightweight responsive HTML homepage for GitHub Pages or direct hosting.
+    </div>
+  </footer>
+</body>
+</html>
