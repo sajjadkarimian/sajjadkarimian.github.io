@@ -455,10 +455,26 @@
   }
 }
 
+.training-group + .training-group {
+  margin-top: 26px;
+}
+
+.training-group-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0;
+  margin: 0 0 14px;
+}
+
 .training-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
+}
+
+.training-grid-secondary {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .training-card {
@@ -468,7 +484,7 @@
   background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
   box-shadow: 0 8px 20px rgba(20, 32, 51, 0.04);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-  min-height: 190px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -480,48 +496,79 @@
   border-color: #c8d8f0;
 }
 
+.training-card.secondary {
+  opacity: 0.92;
+  border-style: dashed;
+  background: linear-gradient(180deg, #fcfdff 0%, #f8fbff 100%);
+}
+
+.training-card.secondary:hover {
+  opacity: 1;
+}
+
 .training-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #edf3ff 0%, #e5efff 100%);
-  border: 1px solid #d6e3ff;
+  background: linear-gradient(180deg, #f4f7ff 0%, #edf3ff 100%);
+  border: 1px solid #dbe5f8;
   color: var(--accent);
   flex-shrink: 0;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.training-card:hover .training-icon {
+  transform: scale(1.05);
 }
 
 .training-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .training-card h3 {
   font-size: 1rem;
   line-height: 1.42;
   margin: 0;
+  min-height: 56px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @media (max-width: 1100px) {
   .training-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .training-grid-secondary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 920px) {
-  .training-grid {
+  .training-grid,
+  .training-grid-secondary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
-  .training-grid {
+  .training-grid,
+  .training-grid-secondary {
     grid-template-columns: 1fr;
   }
 
   .training-card {
     min-height: auto;
+  }
+
+  .training-card h3 {
+    min-height: auto;
+    -webkit-line-clamp: unset;
   }
 }
