@@ -467,14 +467,11 @@
   margin: 0 0 14px;
 }
 
-.training-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
+.training-grid,
 .training-grid-secondary {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
 }
 
 .training-card {
@@ -488,6 +485,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  height: 100%;
 }
 
 .training-card:hover {
@@ -540,20 +538,10 @@
   overflow: hidden;
 }
 
-@media (max-width: 1100px) {
-  .training-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .training-grid-secondary {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 920px) {
   .training-grid,
   .training-grid-secondary {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
