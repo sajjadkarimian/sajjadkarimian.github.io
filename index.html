@@ -483,6 +483,83 @@
     padding: 16px 18px;
   }
 }
+    .training-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.training-card {
+  padding: 20px;
+  border: 1px solid #dbe4f3;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
+  box-shadow: 0 8px 20px rgba(20, 32, 51, 0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.training-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(36, 80, 166, 0.10);
+  border-color: #c8d8f0;
+}
+
+.training-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 62px;
+  width: fit-content;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #edf3ff 0%, #e5efff 100%);
+  color: var(--accent);
+  border: 1px solid #d6e3ff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.training-card h3 {
+  font-size: 1.02rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.training-issuer {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .training-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  .training-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-card {
+    min-height: auto;
+  }
+}
+    
   </style>
 </head>
 <body>
@@ -772,24 +849,68 @@
         </div>
       </div>
     </section>
+
     <section id="training">
   <div class="container card section-card">
     <div class="section-head">
       <div>
         <h2>Professional Development</h2>
-        <p class="muted">Selected certifications and additional training in data and analytics.</p>
+        <p class="muted">Selected certifications and additional training.</p>
       </div>
     </div>
 
-    <div class="item">
-      <p class="muted">
-        IBM Data Analytics Professional Certificate · Google Data Analytics Foundations ·
-        Kaggle (Python, Pandas, Machine Learning) · GDPR Training (UCD) ·
-        Research Integrity (UCD) · Systemic Risk Management (Trinity College Dublin)
-      </p>
+    <div class="training-grid">
+      <article class="training-card">
+        <div class="training-badge">IBM</div>
+        <h3>Data Analytics Professional Certificate</h3>
+        <p class="training-issuer">IBM</p>
+      </article>
+
+      <article class="training-card">
+        <div class="training-badge">Google</div>
+        <h3>Data Analytics Foundations</h3>
+        <p class="training-issuer">Google</p>
+      </article>
+
+      <article class="training-card">
+        <div class="training-badge">Kaggle</div>
+        <h3>Python</h3>
+        <p class="training-issuer">Kaggle</p>
+      </article>
+
+      <article class="training-card">
+        <div class="training-badge">Kaggle</div>
+        <h3>Pandas</h3>
+        <p class="training-issuer">Kaggle</p>
+      </article>
+
+      <article class="training-card">
+        <div class="training-badge">Kaggle</div>
+        <h3>Introduction to Machine Learning</h3>
+        <p class="training-issuer">Kaggle</p>
+      </article>
+
+      <article class="training-card">
+        <div class="training-badge">UCD</div>
+        <h3>GDPR Training</h3>
+        <p class="training-issuer">University College Dublin</p>
+      </article>
+
+      <article class="training-card">
+        <div class="training-badge">UCD</div>
+        <h3>Research Integrity</h3>
+        <p class="training-issuer">University College Dublin</p>
+      </article>
+
+      <article class="training-card">
+        <div class="training-badge">TCD</div>
+        <h3>Systemic Risk Management</h3>
+        <p class="training-issuer">Trinity College Dublin</p>
+      </article>
     </div>
   </div>
 </section>
+    
   </main>
 
   <footer class="footer">
