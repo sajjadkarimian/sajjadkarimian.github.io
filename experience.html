@@ -6,7 +6,42 @@
   <title>Experience | Sajjad Karimian</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
+<script>
+  const certificateCards = document.querySelectorAll(".certificate-card");
+  const modal = document.getElementById("certificate-modal");
+  const modalImage = document.getElementById("modal-image");
+  const closeButton = document.getElementById("modal-close");
 
+  certificateCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const imageSrc = card.getAttribute("data-certificate");
+      modalImage.src = imageSrc;
+      modal.classList.add("active");
+    });
+  });
+
+  closeButton.addEventListener("click", () => {
+    modal.classList.remove("active");
+    modalImage.src = "";
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.remove("active");
+      modalImage.src = "";
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      modal.classList.remove("active");
+      modalImage.src = "";
+    }
+  });
+</script>
+
+
+  
 <body>
 <header class="nav">
   <div class="container nav-inner">
