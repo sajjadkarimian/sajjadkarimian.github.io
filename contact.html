@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Sajjad Karimian</title>
+
+  <meta
+    name="description"
+    content="Contact Sajjad Karimian regarding research collaborations, healthcare data projects, trustworthy AI, and academic opportunities."
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Sajjad Karimian">
+  <meta property="og:description" content="Get in touch regarding research collaborations, projects, and academic opportunities.">
+  <meta property="og:image" content="https://sjka.site/images/og-image.png">
+  <meta property="og:url" content="https://sjka.site/contact.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <meta name="theme-color" content="#2450a6">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <style>
+    :root {
+      --bg: #f4f7fc;
+      --surface: rgba(255,255,255,0.88);
+      --text: #142033;
+      --muted: #5c6880;
+      --line: #d9e2f0;
+      --accent: #2450a6;
+      --accent-2: #4f7df0;
+      --shadow: 0 16px 40px rgba(20,32,51,0.08);
+      --radius: 24px;
+      --max: 1140px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background:
+        radial-gradient(circle at top left, rgba(79,125,240,0.10), transparent 26%),
+        radial-gradient(circle at top right, rgba(36,80,166,0.08), transparent 20%),
+        linear-gradient(180deg, #f8fbff 0%, #f3f6fb 100%);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(248,251,255,0.78);
+      border-bottom: 1px solid rgba(217,226,240,0.9);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      color: #34518d;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      flex: 1;
+      padding: 64px 0;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(217,226,240,0.95);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 42px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 22px;
+      border: 1px solid #dce7ff;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.06;
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 60ch;
+      margin-bottom: 34px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 30px;
+      margin-bottom: 34px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .info-card {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid #dbe4f3;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .info-title {
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .info-card p,
+    .info-card a {
+      margin: 0;
+      color: var(--text);
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .input,
+    textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid #d8e2f2;
+      background: #fff;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--text);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #7ea2f6;
+      box-shadow: 0 0 0 4px rgba(79,125,240,0.10);
+    }
+
+    textarea {
+      min-height: 190px;
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      box-shadow: 0 14px 26px rgba(36,80,166,0.20);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      padding: 0 0 30px;
+    }
+
+    .footer-card {
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-card a {
+      font-weight: 700;
+    }
+
+    @media (max-width: 920px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-wrapper {
+        padding: 28px;
+      }
+
+      .footer-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 34px 0;
+      }
+
+      .contact-wrapper {
+        padding: 22px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 0.92rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Sajjad Karimian</a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="card contact-wrapper">
+
+        <div class="eyebrow">
+          Contact & Collaboration
+        </div>
+
+        <h1>Let’s Work Together</h1>
+
+        <p class="lead">
+          Feel free to contact me regarding healthcare data research,
+          trustworthy AI, ontology engineering, socio-technical systems,
+          academic collaborations, or freelance technical projects.
+        </p>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <div class="info-card">
+              <div class="info-title">Email</div>
+              <a href="mailto:sajjad.karimian94@gmail.com">
+                sajjad.karimian94@gmail.com
+              </a>
+            </div>
+
+            <div class="info-card">
+              <div class="info-title">Location</div>
+              <p>Dublin, Ireland</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-title">Research Areas</div>
+              <p>
+                Healthcare Data · Trustworthy AI · FAIR Data ·
+                Ontology Engineering · Human Factors
+              </p>
+            </div>
+
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/mbdwyvjj"
+            method="POST"
+          >
+
+            <input
+              class="input"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+            >
+
+            <input
+              class="input"
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+            >
+
+            <input
+              class="input"
+              type="text"
+              name="subject"
+              placeholder="Subject"
+            >
+
+            <textarea
+              name="message"
+              placeholder="Your message"
+              required
+            ></textarea>
+
+            <button class="btn btn-primary" type="submit">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container card footer-card">
+      <div>© 2026 Sajjad Karimian</div>
+
+      <div>
+        <a href="mailto:sajjad.karimian94@gmail.com">
+          sajjad.karimian94@gmail.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
