@@ -4,7 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications | Sajjad Karimian</title>
+  <meta name="description" content="Publications by Sajjad Karimian on trustworthy AI, healthcare informatics, human factors, and socio-technical systems.">
   <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .pub {
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .pub:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .pub h3 {
+      font-size: 1.05rem;
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .pub h3 a {
+      color: var(--text);
+    }
+
+    .pub h3 a:hover {
+      color: var(--accent);
+    }
+
+    .pub-meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .pub-summary {
+      font-size: 0.96rem;
+      color: #4a5568;
+      line-height: 1.7;
+      margin: 0;
+      padding: 12px 16px;
+      border-left: 3px solid var(--accent);
+      background: linear-gradient(90deg, #f0f5ff, #f8fbff);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .pub-badge {
+      display: inline-flex;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .badge-journal {
+      background: #edf3ff;
+      color: var(--accent);
+      border: 1px solid #dce8ff;
+    }
+
+    .badge-conference {
+      background: #f0faf4;
+      color: #1e7a45;
+      border: 1px solid #c6e8d4;
+    }
+
+    .badge-preprint {
+      background: #fff8ed;
+      color: #92540a;
+      border: 1px solid #fde9c0;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,63 +96,83 @@
     <div class="container card section-card">
       <div class="eyebrow">Publications</div>
       <h1>Publications</h1>
-      <p class="subtitle">Journal articles, conference papers, abstracts, and scholarly outputs.</p>
+      <p class="subtitle">Journal articles, conference papers, and scholarly outputs on trustworthy AI, healthcare informatics, and socio-technical systems.</p>
     </div>
   </section>
 
+  <!-- Journal Articles -->
   <section>
     <div class="container card section-card">
       <h2>Journal Articles</h2>
 
       <div class="pub">
+        <span class="pub-badge badge-journal">Journal Article</span>
         <h3><a href="https://doi.org/10.1080/00140139.2025.2512426" target="_blank">Trustworthy artificial intelligence and organisational trust: a scoping review using socio-technical systems analysis</a></h3>
-        <div class="pub-meta">Ergonomics, 2025</div>
+        <div class="pub-meta">Ergonomics · 2025</div>
+        <p class="pub-summary">When does AI earn trust inside a healthcare organisation — and when does it erode it? This scoping review examines the relationship between trustworthy AI and organisational trust, using socio-technical systems analysis to go beyond technical metrics and look at the human, structural, and contextual factors that determine whether AI is actually adopted and used safely.</p>
       </div>
 
       <div class="pub">
+        <span class="pub-badge badge-journal">Journal Article</span>
         <h3><a href="https://doi.org/10.1016/j.imu.2023.101214" target="_blank">A systematic review of effects of exchanging and sharing medical image systems in a sociotechnical context</a></h3>
-        <div class="pub-meta">Informatics in Medicine Unlocked, 2023</div>
+        <div class="pub-meta">Informatics in Medicine Unlocked · 2023</div>
+        <p class="pub-summary">Medical image sharing is a technical problem treated as if it has only technical solutions. This review examines the socio-technical dimensions — organisational workflows, user behaviour, governance structures — that determine whether image exchange systems succeed or fail in practice.</p>
       </div>
 
       <div class="pub">
+        <span class="pub-badge badge-journal">Journal Article</span>
         <h3><a href="https://doi.org/10.1002/hsr2.1760" target="_blank">Requirements specification, design, and evaluation of dental image exchange and management system with user-centered approach</a></h3>
-        <div class="pub-meta">Health Science Reports, 2023</div>
+        <div class="pub-meta">Health Science Reports · 2023</div>
+        <p class="pub-summary">A practical case study in user-centred design for healthcare informatics: specifying requirements, designing, and evaluating a dental image management system by keeping clinical users — not system architects — at the centre of the process.</p>
       </div>
 
       <div class="pub">
+        <span class="pub-badge badge-journal">Journal Article</span>
         <h3>Colorectal cancer risk factors in north-eastern Iran: A retrospective cross-sectional study based on GIS and spatial analysis</h3>
-        <div class="pub-meta">Geospatial Health, 2019</div>
+        <div class="pub-meta">Geospatial Health · 2019</div>
+        <p class="pub-summary">An early application of geospatial analysis to public health data — mapping colorectal cancer risk factors using GIS methods to surface spatial patterns that aggregate statistics obscure.</p>
       </div>
     </div>
   </section>
 
+  <!-- Conference Papers -->
   <section>
     <div class="container card section-card">
-      <h2>Conference Papers and Preprints</h2>
+      <h2>Conference Papers & Preprints</h2>
 
       <div class="pub">
+        <span class="pub-badge badge-conference">Conference Paper</span>
         <h3>Integrating Human Factors Socio-Technical Systems Analysis in a Data Investigation in an Acute Hospital</h3>
-        <div class="pub-meta">HEPS 2025</div>
+        <div class="pub-meta">HEPS 2025 · Healthcare Ergonomics and Patient Safety</div>
+        <p class="pub-summary">Drawing on fieldwork at St. James's Hospital Dublin, this paper demonstrates how human factors and socio-technical systems analysis can be applied to clinical data investigations — moving beyond data quality as a technical problem toward a systemic, organisational understanding.</p>
       </div>
 
       <div class="pub">
+        <span class="pub-badge badge-conference">Conference Paper</span>
         <h3>Measuring the Organizational Trust of Artificial Intelligence Systems in Healthcare with Socio-Technical Systems Analysis Methods</h3>
         <div class="pub-meta">Irish Human Factors and Ergonomics Society Annual Conference</div>
+        <p class="pub-summary">Proposes a structured approach to measuring organisational trust in healthcare AI systems — shifting the question from "is this AI accurate?" to "does the organisation trust it enough to use it safely and consistently?"</p>
       </div>
 
       <div class="pub">
+        <span class="pub-badge badge-preprint">Preprint · arXiv</span>
         <h3><a href="https://arxiv.org/abs/2411.02067" target="_blank">Imagining better AI-enabled healthcare futures: The case for care by design</a></h3>
-        <div class="pub-meta">CSCW / arXiv, 2024</div>
+        <div class="pub-meta">CSCW / arXiv · 2024</div>
+        <p class="pub-summary">A forward-looking argument that better AI-enabled healthcare requires design — not just development. Examines how the values embedded in AI system design shape clinical care, and what "care by design" means as a practical and ethical commitment.</p>
       </div>
 
       <div class="pub">
+        <span class="pub-badge badge-conference">Conference Paper</span>
         <h3>Integrating Human Factors into Trustworthy AI for Healthcare</h3>
-        <div class="pub-meta">Human-Centered Artificial Intelligence, 2023</div>
+        <div class="pub-meta">Human-Centered Artificial Intelligence Workshop · 2023</div>
+        <p class="pub-summary">Argues that trustworthy AI in healthcare cannot be achieved through technical methods alone — human factors analysis of clinical work systems is a necessary part of any rigorous AI evaluation and governance framework.</p>
       </div>
 
       <div class="pub">
+        <span class="pub-badge badge-conference">Conference Paper</span>
         <h3>A Systematic Review for Evaluating the Effects of Teleradiology</h3>
-        <div class="pub-meta">Iranian Journal of Radiology, 2019</div>
+        <div class="pub-meta">Iranian Journal of Radiology · 2019</div>
+        <p class="pub-summary">A systematic review of teleradiology outcomes — one of the earliest applications of health informatics methods in the author's research trajectory, examining how remote radiology services affect clinical quality, efficiency, and patient safety.</p>
       </div>
     </div>
   </section>
