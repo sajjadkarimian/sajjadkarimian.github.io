@@ -4,44 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | Sajjad Karimian</title>
+  <meta name="description" content="Sajjad Karimian's experience spanning hospital IT, clinical data analysis, healthcare AI research, and academic teaching.">
   <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 28px;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .timeline-meta {
+      padding-top: 3px;
+    }
+
+    .timeline-date {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.4;
+    }
+
+    .timeline-org {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .timeline-body h3 {
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline-body p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .timeline-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .transition-note {
+      margin: 8px 0 0;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #edf3ff, #f5f8ff);
+      border: 1px solid #dce8ff;
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    @media (max-width: 720px) {
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
-<script>
-  const certificateCards = document.querySelectorAll(".certificate-card");
-  const modal = document.getElementById("certificate-modal");
-  const modalImage = document.getElementById("modal-image");
-  const closeButton = document.getElementById("modal-close");
 
-  certificateCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const imageSrc = card.getAttribute("data-certificate");
-      modalImage.src = imageSrc;
-      modal.classList.add("active");
-    });
-  });
-
-  closeButton.addEventListener("click", () => {
-    modal.classList.remove("active");
-    modalImage.src = "";
-  });
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.classList.remove("active");
-      modalImage.src = "";
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      modal.classList.remove("active");
-      modalImage.src = "";
-    }
-  });
-</script>
-
-
-  
 <body>
 <header class="nav">
   <div class="container nav-inner">
@@ -62,219 +99,231 @@
       <div class="eyebrow">Experience</div>
       <h1>Experience & Training</h1>
       <p class="subtitle">
-        Research, teaching, hospital analytics, IT systems, and professional development.
+        A path from hospital IT and server infrastructure to clinical data analysis, healthcare AI research, and responsible AI governance.
       </p>
     </div>
   </section>
 
+  <!-- Timeline -->
   <section>
     <div class="container card section-card">
-      <h2>Experience</h2>
+      <div class="section-head">
+        <h2>Professional Timeline</h2>
+      </div>
 
-      <div class="grid-2">
-        <article class="item">
-          <div class="kicker">2024–Present</div>
-          <h3>Research Assistant, University College Dublin</h3>
-          <ul class="list">
-            <li>Executed research projects in healthcare data and trustworthy AI.</li>
-            <li>Contributed to journal articles and conference papers.</li>
-            <li>Worked on socio-technical research and healthcare data analysis.</li>
-          </ul>
-        </article>
+      <div class="timeline">
 
-        <article class="item">
-          <div class="kicker">2023–Present</div>
-          <h3>Teaching Assistant, University College Dublin</h3>
-          <ul class="list">
-            <li>Supported coursework and assessments in data-related modules.</li>
-            <li>Helped students with Python and data science concepts.</li>
-          </ul>
-        </article>
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <div class="timeline-date">Jan 2026 – Present</div>
+            <div class="timeline-org">University College Dublin</div>
+          </div>
+          <div class="timeline-body">
+            <h3>Research Assistant — VICTORY Project</h3>
+            <p>Supporting healthcare innovation and digital health research within the VICTORY project. Contributing to stakeholder engagement, evidence synthesis, and healthcare-focused analytical workflows. Translating healthcare and research requirements into structured digital solutions across multidisciplinary academic and healthcare teams.</p>
+          </div>
+        </div>
 
-        <article class="item">
-          <div class="kicker">Sep 2024–Jan 2025</div>
-          <h3>Industrial Placement, St. James’s Hospital</h3>
-          <ul class="list">
-            <li>Analysed hospital data systems and clinical data flow inefficiencies.</li>
-            <li>Designed data governance and workflow maps.</li>
-            <li>Supported reporting and decision-making using structured data insights.</li>
-          </ul>
-        </article>
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <div class="timeline-date">Sep 2024 – Present</div>
+            <div class="timeline-org">University College Dublin</div>
+          </div>
+          <div class="timeline-body">
+            <h3>Research Assistant — ID4AI Project</h3>
+            <p>Contributing to healthcare AI innovation and inclusive design research within the ID4AI project. Supporting analytical and governance-related activities for healthcare data and AI systems. Working within interdisciplinary teams spanning healthcare, technology, and research domains, with a focus on AI adoption and human-centred design.</p>
+          </div>
+        </div>
 
-        <article class="item">
-          <div class="kicker">2014–2023</div>
-          <h3>IT Support & Systems Administration</h3>
-          <ul class="list">
-            <li>Managed infrastructure and user support across healthcare and educational settings.</li>
-            <li>Worked with MySQL, Linux environments, documentation, and technical support workflows.</li>
-          </ul>
-        </article>
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <div class="timeline-date">Sep 2023 – Jan 2026</div>
+            <div class="timeline-org">University College Dublin</div>
+          </div>
+          <div class="timeline-body">
+            <h3>Researcher — Healthcare Data Governance</h3>
+            <p>Designed healthcare data governance and data quality frameworks for clinical AI and healthcare analytics systems. Conducted evidence synthesis and healthcare data analysis using SQL, Python, and research methodologies. Supported transparency, FAIR data, and interoperability initiatives within healthcare-focused projects. Produced stakeholder-ready reports, analytical outputs, and governance documentation.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <div class="timeline-date">Jan 2024 – Feb 2026</div>
+            <div class="timeline-org">University College Dublin</div>
+          </div>
+          <div class="timeline-body">
+            <h3>Teaching Assistant</h3>
+            <p>Supported undergraduate teaching and practical lab sessions across computer science modules. Guided students through coursework, assessments, and technical problem-solving in programming and data-related subjects.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <div class="timeline-date">Sep 2024 – Jan 2025</div>
+            <div class="timeline-org">St. James's Hospital Dublin</div>
+          </div>
+          <div class="timeline-body">
+            <h3>Industrial Placement — Clinical Data & Informatics</h3>
+            <p>Evaluated healthcare data collection, quality management, and reporting practices across a major acute hospital. Identified data quality gaps, documented reporting standards, and produced structured analytical outputs for clinical and senior operational stakeholders. Applied healthcare informatics methods to assess data transparency and accountability across a complex clinical environment.</p>
+            <p class="transition-note">↳ This placement confirmed what I had observed from the IT side: the data problems in healthcare are rarely technical — they are human, organisational, and systemic.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <div class="timeline-date">May 2023 – Sep 2023</div>
+            <div class="timeline-org">Mashhad University of Medical Sciences</div>
+          </div>
+          <div class="timeline-body">
+            <h3>IT Specialist — Sharyati Hospital</h3>
+            <p>Provided IT support and systems administration within a clinical hospital environment. Working directly in a hospital setting made the gap between technical infrastructure and clinical realities visible — the moment that shaped my move into Medical Informatics and research.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <div class="timeline-date">Aug 2015 – Aug 2022</div>
+            <div class="timeline-org">Gostareh Danesh</div>
+          </div>
+          <div class="timeline-body">
+            <h3>Server Manager & Web Department</h3>
+            <p>Seven years managing Linux server infrastructure (Debian), web services, email systems, and security configurations. Coordinated with frontend and backend developers on server-side architecture and deployment. This hands-on technical grounding — understanding how systems are actually built and where they break — now informs how I analyse and evaluate digital systems in healthcare and AI contexts.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- Skills -->
   <section>
-  <div class="container card section-card">
-    <div class="section-head">
-      <h2>Technical Skills</h2>
-      <p class="muted">Indicative self-assessment based on practical use in research, analysis, and technical projects.</p>
+    <div class="container card section-card">
+      <div class="section-head">
+        <h2>Technical Skills</h2>
+        <p class="muted">Based on practical use in research, clinical analysis, and applied projects.</p>
+      </div>
+
+      <div class="skills-meter-grid">
+        <div class="skill-meter">
+          <div class="skill-top"><span>Python</span><span>Advanced</span></div>
+          <div class="meter"><div style="width:82%"></div></div>
+        </div>
+        <div class="skill-meter">
+          <div class="skill-top"><span>SQL</span><span>Advanced</span></div>
+          <div class="meter"><div style="width:78%"></div></div>
+        </div>
+        <div class="skill-meter">
+          <div class="skill-top"><span>Pandas / NumPy</span><span>Advanced</span></div>
+          <div class="meter"><div style="width:80%"></div></div>
+        </div>
+        <div class="skill-meter">
+          <div class="skill-top"><span>Data Visualisation</span><span>Intermediate</span></div>
+          <div class="meter"><div style="width:70%"></div></div>
+        </div>
+        <div class="skill-meter">
+          <div class="skill-top"><span>RDF / OWL</span><span>Advanced</span></div>
+          <div class="meter"><div style="width:78%"></div></div>
+        </div>
+        <div class="skill-meter">
+          <div class="skill-top"><span>SPARQL</span><span>Intermediate</span></div>
+          <div class="meter"><div style="width:68%"></div></div>
+        </div>
+        <div class="skill-meter">
+          <div class="skill-top"><span>Linux / Server Admin</span><span>Intermediate</span></div>
+          <div class="meter"><div style="width:70%"></div></div>
+        </div>
+        <div class="skill-meter">
+          <div class="skill-top"><span>Git</span><span>Intermediate</span></div>
+          <div class="meter"><div style="width:62%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-scale">
+        <span>Beginner</span>
+        <span>Intermediate</span>
+        <span>Advanced</span>
+        <span>Expert</span>
+      </div>
     </div>
+  </section>
 
-    <div class="skills-meter-grid">
-
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>Python</span>
-          <span>Advanced</span>
-        </div>
-        <div class="meter"><div style="width: 82%;"></div></div>
+  <!-- Certificates -->
+  <section>
+    <div class="container card section-card">
+      <div class="section-head">
+        <h2>Professional Development</h2>
+        <p class="muted">Selected certificates, training, and workshops. Click each card to view the certificate.</p>
       </div>
 
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>SQL</span>
-          <span>Advanced</span>
-        </div>
-        <div class="meter"><div style="width: 78%;"></div></div>
-      </div>
+      <div class="certificate-grid">
+        <article class="certificate-card" data-certificate="images/certificates/ibm-data-analytics.jpg">
+          <div class="certificate-thumb">
+            <img src="images/certificates/ibm-data-analytics.jpg" alt="IBM Data Analytics Professional Certificate">
+          </div>
+          <div>
+            <div class="kicker">IBM</div>
+            <h3>Data Analytics Professional Certificate</h3>
+          </div>
+        </article>
 
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>Pandas / NumPy</span>
-          <span>Advanced</span>
-        </div>
-        <div class="meter"><div style="width: 80%;"></div></div>
-      </div>
+        <article class="certificate-card" data-certificate="images/certificates/google-data-analytics.jpg">
+          <div class="certificate-thumb">
+            <img src="images/certificates/google-data-analytics.jpg" alt="Google Data Analytics Foundations">
+          </div>
+          <div>
+            <div class="kicker">Google</div>
+            <h3>Data Analytics Foundations</h3>
+          </div>
+        </article>
 
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>Data Visualisation</span>
-          <span>Intermediate</span>
-        </div>
-        <div class="meter"><div style="width: 70%;"></div></div>
-      </div>
+        <article class="certificate-card" data-certificate="images/certificates/gdpr-ucd.jpg">
+          <div class="certificate-thumb">
+            <img src="images/certificates/gdpr-ucd.jpg" alt="GDPR Training University College Dublin">
+          </div>
+          <div>
+            <div class="kicker">University College Dublin</div>
+            <h3>GDPR Training</h3>
+          </div>
+        </article>
 
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>RDF / OWL</span>
-          <span>Advanced</span>
-        </div>
-        <div class="meter"><div style="width: 78%;"></div></div>
-      </div>
+        <article class="certificate-card" data-certificate="images/certificates/research-integrity-ucd.jpg">
+          <div class="certificate-thumb">
+            <img src="images/certificates/research-integrity-ucd.jpg" alt="Research Integrity University College Dublin">
+          </div>
+          <div>
+            <div class="kicker">University College Dublin</div>
+            <h3>Research Integrity</h3>
+          </div>
+        </article>
 
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>SPARQL</span>
-          <span>Intermediate</span>
-        </div>
-        <div class="meter"><div style="width: 68%;"></div></div>
-      </div>
+        <article class="certificate-card" data-certificate="images/certificates/systemic-risk-tcd.jpg">
+          <div class="certificate-thumb">
+            <img src="images/certificates/systemic-risk-tcd.jpg" alt="Systemic Risk Management Trinity College Dublin">
+          </div>
+          <div>
+            <div class="kicker">Trinity College Dublin</div>
+            <h3>Systemic Risk Management</h3>
+          </div>
+        </article>
 
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>Linux</span>
-          <span>Intermediate</span>
-        </div>
-        <div class="meter"><div style="width: 65%;"></div></div>
+        <article class="certificate-card" data-certificate="images/certificates/sophia-2026.jpg">
+          <div class="certificate-thumb">
+            <img src="images/certificates/sophia-2026.jpg" alt="SOPHIA 2026 International Society of Medical AI">
+          </div>
+          <div>
+            <div class="kicker">International Society of Medical AI</div>
+            <h3>SOPHIA 2026 – Conference Attendance</h3>
+          </div>
+        </article>
       </div>
-
-      <div class="skill-meter">
-        <div class="skill-top">
-          <span>Git</span>
-          <span>Intermediate</span>
-        </div>
-        <div class="meter"><div style="width: 62%;"></div></div>
-      </div>
-
     </div>
-
-    <div class="skill-scale">
-      <span>Beginner</span>
-      <span>Intermediate</span>
-      <span>Advanced</span>
-      <span>Expert</span>
-    </div>
-  </div>
-</section>
-
-  <<section id="training">
-  <div class="container card section-card">
-    <div class="section-head">
-      <h2>Professional Development</h2>
-      <p class="muted">Selected certificates, training, and workshops. Click each card to view the certificate.</p>
-    </div>
-
-    <div class="certificate-grid">
-
-      <article class="certificate-card" data-certificate="images/certificates/ibm-data-analytics.jpg">
-        <div class="certificate-thumb">
-          <img src="images/certificates/ibm-data-analytics.jpg" alt="IBM Data Analytics Professional Certificate">
-        </div>
-        <div>
-          <div class="kicker">IBM</div>
-          <h3>Data Analytics Professional Certificate</h3>
-        </div>
-      </article>
-
-      <article class="certificate-card" data-certificate="images/certificates/google-data-analytics.jpg">
-        <div class="certificate-thumb">
-          <img src="images/certificates/google-data-analytics.jpg" alt="Google Data Analytics Foundations">
-        </div>
-        <div>
-          <div class="kicker">Google</div>
-          <h3>Data Analytics Foundations</h3>
-        </div>
-      </article>
-
-      <article class="certificate-card" data-certificate="images/certificates/gdpr-ucd.jpg">
-        <div class="certificate-thumb">
-          <img src="images/certificates/gdpr-ucd.jpg" alt="GDPR Training University College Dublin">
-        </div>
-        <div>
-          <div class="kicker">University College Dublin</div>
-          <h3>GDPR Training</h3>
-        </div>
-      </article>
-
-      <article class="certificate-card" data-certificate="images/certificates/research-integrity-ucd.jpg">
-        <div class="certificate-thumb">
-          <img src="images/certificates/research-integrity-ucd.jpg" alt="Research Integrity University College Dublin">
-        </div>
-        <div>
-          <div class="kicker">University College Dublin</div>
-          <h3>Research Integrity</h3>
-        </div>
-      </article>
-
-      <article class="certificate-card" data-certificate="images/certificates/systemic-risk-tcd.jpg">
-        <div class="certificate-thumb">
-          <img src="images/certificates/systemic-risk-tcd.jpg" alt="Systemic Risk Management Trinity College Dublin">
-        </div>
-        <div>
-          <div class="kicker">Trinity College Dublin</div>
-          <h3>Systemic Risk Management</h3>
-        </div>
-      </article>
-
-      <article class="certificate-card" data-certificate="images/certificates/sophia-2026.jpg">
-        <div class="certificate-thumb">
-          <img src="images/certificates/sophia-2026.jpg" alt="SOPHIA 2026 International Society of Medical AI">
-        </div>
-        <div>
-          <div class="kicker">International Society of Medical AI</div>
-          <h3>SOPHIA 2026 – Certificate of Attendance</h3>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <div id="certificate-modal" class="certificate-modal">
   <button id="modal-close" class="modal-close" type="button">×</button>
   <img id="modal-image" src="" alt="Certificate preview">
 </div>
-</main>
 
 <footer class="footer">
   <div class="container card footer-card">
@@ -282,5 +331,32 @@
     <div><a href="mailto:sajjad.karimian94@gmail.com">sajjad.karimian94@gmail.com</a></div>
   </div>
 </footer>
+
+<script>
+  const certificateCards = document.querySelectorAll(".certificate-card");
+  const modal = document.getElementById("certificate-modal");
+  const modalImage = document.getElementById("modal-image");
+  const closeButton = document.getElementById("modal-close");
+
+  certificateCards.forEach(card => {
+    card.addEventListener("click", () => {
+      modalImage.src = card.getAttribute("data-certificate");
+      modal.classList.add("active");
+    });
+  });
+
+  closeButton.addEventListener("click", () => {
+    modal.classList.remove("active");
+    modalImage.src = "";
+  });
+
+  modal.addEventListener("click", e => {
+    if (e.target === modal) { modal.classList.remove("active"); modalImage.src = ""; }
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") { modal.classList.remove("active"); modalImage.src = ""; }
+  });
+</script>
 </body>
 </html>
