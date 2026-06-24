@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Sajjad Karimian</title>
-  <meta name="description" content="Research and applied projects by Sajjad Karimian in healthcare data governance, clinical AI, ontology engineering, and human-centred systems design.">
+  <meta name="description" content="Applied and research projects by Sajjad Karimian in healthcare systems implementation, clinical data analysis, interoperability, and human-centred design.">
   <link rel="stylesheet" href="styles/main.css">
   <style>
     .outcome-line {
@@ -14,6 +14,7 @@
       color: var(--accent);
     }
   </style>
+</head>
 
 <body>
 <header class="nav">
@@ -35,8 +36,73 @@
       <div class="eyebrow">Projects</div>
       <h1>Projects</h1>
       <p class="subtitle">
-        Research and applied work at the intersection of healthcare systems, data governance, and human-centred AI.
+        Applied and research work across healthcare systems implementation, data analysis, and human-centred design.
       </p>
+    </div>
+  </section>
+
+  <!-- Applied Projects -->
+  <section>
+    <div class="container card section-card">
+      <div class="section-head">
+        <h2>Applied &amp; Technical Projects</h2>
+        <p class="muted">Hands-on work in system deployment, configuration, and data analysis — needs to production.</p>
+      </div>
+
+      <div class="grid-3">
+
+        <article class="item project-card">
+          <div class="kicker">VICTORY Project · Production</div>
+          <h3>Moodle-Based Learning Platform</h3>
+          <p class="muted">
+            <strong>Need:</strong> A healthcare-education project needed a structured, usable learning platform that teams could actually run and maintain.<br><br>
+            <strong>What I did:</strong> Designed, built, configured, and deployed a Moodle-based LMS end to end — server setup, custom plugins for usability and course structure, and the user-facing experience.<br><br>
+            <strong>Outcome:</strong> A full production deployment, live and serving active healthcare-education cohorts.
+          </p>
+          <p class="outcome-line">→ Live production platform serving active healthcare education cohorts</p>
+          <div class="project-links">
+            <a href="https://victory-education.com" target="_blank" rel="noopener">Live Platform →</a>
+            <a href="https://github.com/sajjadkarimian/Moodle-Plugins" target="_blank" rel="noopener">Source Code →</a>
+          </div>
+        </article>
+
+        <article class="item project-card">
+          <div class="kicker">Clinical Research Data Capture · Production</div>
+          <h3>REDCap Deployment on AWS</h3>
+          <p class="muted">
+            <strong>Need:</strong> A research team needed a secure, self-hosted platform to capture and manage study data.<br><br>
+            <strong>What I did:</strong> Provisioned and configured REDCap on AWS (Lightsail) — server and environment setup, application configuration, and user onboarding — selecting the right tool for the requirement rather than building from scratch.<br><br>
+            <strong>Outcome:</strong> A live REDCap instance in active use by research users to collect and manage data.
+          </p>
+          <p class="outcome-line">→ Live REDCap instance deployed on AWS and in active use</p>
+          <div class="project-links">
+            <a href="contact.html">Discuss This Work →</a>
+          </div>
+        </article>
+
+        <article class="item project-card">
+          <div class="kicker">Data Analysis · Python</div>
+          <h3>Housing Market Forecasting</h3>
+          <p class="muted">
+            Built forecasting models for house price and rent analysis in Python — data cleaning, exploratory analysis, feature engineering, statistical modelling, and visualisation — applied to real Irish housing-market data to surface trends and anomalies.
+          </p>
+          <div class="project-links">
+            <a href="contact.html">Request Details →</a>
+          </div>
+        </article>
+
+        <article class="item project-card">
+          <div class="kicker">ETL &amp; Visualisation · Python</div>
+          <h3>Dublin Bikes Data Pipeline</h3>
+          <p class="muted">
+            Built an end-to-end pipeline using the Dublin Bikes public API — automating collection, cleaning, transformation, and visualisation for exploratory analysis and reporting. The same data-flow logic that applies to clinical data.
+          </p>
+          <div class="project-links">
+            <a href="contact.html">Request Details →</a>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -45,7 +111,7 @@
     <div class="container card section-card">
       <div class="section-head">
         <h2>Research Projects</h2>
-        <p class="muted">Academic and applied research into healthcare data transparency, clinical AI governance, and socio-technical systems.</p>
+        <p class="muted">Research into healthcare data transparency, clinical AI adoption, and socio-technical systems — the analytical depth behind the applied work.</p>
       </div>
 
       <div class="grid-2">
@@ -81,13 +147,13 @@
 
         <article class="item project-card">
           <div class="kicker">Industrial Placement · St. James's Hospital Dublin</div>
-          <h3>Clinical Data Flow Mapping & Governance</h3>
+          <h3>Clinical Data Flow Mapping &amp; Governance</h3>
           <p class="muted">
             <strong>Problem:</strong> A major acute hospital had fragmented data collection, unclear reporting accountability, and gaps between what was recorded and what was clinically meaningful.<br><br>
-            <strong>Approach:</strong> Analysed data collection and quality management practices across hospital departments. Mapped data flows, identified governance gaps, and documented reporting standards for clinical and senior operational stakeholders.<br><br>
-            <strong>Outcome:</strong> Structured governance outputs and workflow maps that surfaced systemic data quality issues — and informed how similar problems could be addressed at a design level, not just operationally.
+            <strong>Approach:</strong> Analysed data collection and quality-management practices across hospital departments. Mapped data flows, identified governance gaps, and documented reporting standards for clinical and senior operational stakeholders.<br><br>
+            <strong>Outcome:</strong> Structured outputs and workflow maps that surfaced systemic data-quality issues — and informed how similar problems could be addressed at a design level, not just operationally.
           </p>
-          <p class="outcome-line">→ Governance outputs and workflow maps used by senior clinical and operational stakeholders</p>
+          <p class="outcome-line">→ Outputs and workflow maps used by senior clinical and operational stakeholders</p>
           <div class="project-links">
             <a href="contact.html">Discuss This Work →</a>
           </div>
@@ -98,61 +164,12 @@
           <h3>Inclusive Design for Healthcare AI</h3>
           <p class="muted">
             <strong>Problem:</strong> AI systems in healthcare are frequently designed without meaningful input from the people who will use them — leading to poor adoption, workarounds, and outcomes that fall short of expectations.<br><br>
-            <strong>Approach:</strong> Contributing to research on inclusive design principles for healthcare AI — examining how AI systems can be designed to serve diverse clinical users, with attention to governance, transparency, and human-centred deployment.<br><br>
-            <strong>Outcome:</strong> Ongoing research outputs and governance frameworks supporting responsible AI adoption in clinical settings.
+            <strong>Approach:</strong> Contributing to research on inclusive design principles for healthcare AI — examining how AI systems can be designed to serve diverse clinical users, with attention to transparency, adoption, and human-centred deployment.<br><br>
+            <strong>Outcome:</strong> Ongoing research outputs and frameworks supporting responsible AI adoption in clinical settings.
           </p>
-          <p class="outcome-line">→ Ongoing: contributing to inclusive AI governance frameworks for clinical deployment</p>
+          <p class="outcome-line">→ Ongoing: contributing to human-centred frameworks for clinical AI adoption</p>
           <div class="project-links">
             <a href="contact.html">Discuss This Work →</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Applied Projects -->
-  <section>
-    <div class="container card section-card">
-      <div class="section-head">
-        <h2>Applied & Technical Projects</h2>
-        <p class="muted">Hands-on work in platform development, data engineering, and production deployment.</p>
-      </div>
-
-      <div class="grid-3">
-
-        <article class="item project-card">
-          <div class="kicker">VICTORY Project · Production</div>
-          <h3>Moodle-Based Learning Platform</h3>
-          <p class="muted">
-            Designed, built, and deployed a Moodle-based learning management system for the VICTORY healthcare education project. Developed custom plugins to improve usability, course structure, and delivery. A full production deployment — from server configuration to user-facing experience.
-          </p>
-          <p class="outcome-line">→ Live production platform serving active healthcare education cohorts</p>
-          <div class="project-links">
-            <a href="https://victory-education.com" target="_blank" rel="noopener">Live Platform →</a>
-            <a href="https://github.com/sajjadkarimian/Moodle-Plugins" target="_blank" rel="noopener">Source Code →</a>
-          </div>
-        </article>
-
-        <article class="item project-card">
-          <div class="kicker">Data Science · Python</div>
-          <h3>Housing Market Forecasting</h3>
-          <p class="muted">
-            Developed forecasting models for house price and rent analysis using Python — covering data cleaning, exploratory analysis, feature engineering, and visualisation. Applied to real Irish housing market data to identify trends and anomalies.
-          </p>
-          <div class="project-links">
-            <a href="contact.html">Request Details →</a>
-          </div>
-        </article>
-
-        <article class="item project-card">
-          <div class="kicker">ETL & Visualisation · Python</div>
-          <h3>Dublin Bikes Data Pipeline</h3>
-          <p class="muted">
-            Built an end-to-end ETL pipeline using the Dublin Bikes public API — automating data collection, cleaning, transformation, and visualisation for exploratory analysis and reporting. Demonstrates the same data pipeline logic applicable to clinical data flows.
-          </p>
-          <div class="project-links">
-            <a href="contact.html">Request Details →</a>
           </div>
         </article>
 
