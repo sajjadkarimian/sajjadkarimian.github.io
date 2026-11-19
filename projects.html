@@ -1,188 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | Sajjad Karimian</title>
-  <meta name="description" content="Applied and research projects by Sajjad Karimian in healthcare systems implementation, clinical data analysis, interoperability, and human-centred design.">
+  <meta name="description" content="Projects by Sajjad Karimian: DHIS2 and Superset for AI-assisted pneumonia triage, a Moodle platform for healthcare education, REDCap on AWS, a dental image exchange system, and course and personal projects.">
+  <link rel="canonical" href="https://www.sjka.site/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sajjad Karimian">
+  <meta property="og:title" content="Projects | Sajjad Karimian">
+  <meta property="og:description" content="Projects by Sajjad Karimian: DHIS2 and Superset for AI-assisted pneumonia triage, a Moodle platform for healthcare education, REDCap on AWS, a dental image exchange system, and course and personal projects.">
+  <meta property="og:url" content="https://www.sjka.site/projects.html">
+  <meta property="og:image" content="https://www.sjka.site/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#14283C">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles/main.css">
-  <style>
-    .outcome-line {
-      margin: 14px 0 0;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-  </style>
 </head>
-
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">Sajjad Karimian</a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="experience.html">Experience</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container card section-card">
-      <div class="eyebrow">Projects</div>
-      <h1>Projects</h1>
-      <p class="subtitle">
-        Applied and research work across healthcare systems implementation, data analysis, and human-centred design.
-      </p>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Sajjad Karimian, home">
+        <img src="images/brand/logo-mark.svg" alt="" width="46" height="27">
+        <span>Sajjad Karimian</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Applied Projects -->
-  <section>
-    <div class="container card section-card">
-      <div class="section-head">
-        <h2>Applied &amp; Technical Projects</h2>
-        <p class="muted">Hands-on work in system deployment, configuration, and data analysis — needs to production.</p>
+  <main id="main">
+
+    <section class="page-intro">
+      <div class="container">
+        <h1>Projects</h1>
+        <p>Work projects first, then course, personal and research projects. Each one shows the problem, what I did and the result.</p>
+        <nav class="jump" aria-label="On this page"><a href="#work-title">Work projects</a><a href="#other-title">Course, personal and research projects</a></nav>
       </div>
+    </section>
 
-      <div class="grid-3">
+    <section class="section" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head"><h2 id="work-title">Work projects</h2><p>Systems delivered for real users at University College Dublin, St James's Hospital and in Iran.</p></div>
 
-        <article class="item project-card">
-          <div class="kicker">VICTORY Project · Production</div>
-          <h3>Moodle-Based Learning Platform</h3>
-          <p class="muted">
-            <strong>Need:</strong> A healthcare-education project needed a structured, usable learning platform that teams could actually run and maintain.<br><br>
-            <strong>What I did:</strong> Designed, built, configured, and deployed a Moodle-based LMS end to end — server setup, custom plugins for usability and course structure, and the user-facing experience.<br><br>
-            <strong>Outcome:</strong> A full production deployment, live and serving active healthcare-education cohorts.
-          </p>
-          <p class="outcome-line">→ Live production platform serving active healthcare education cohorts</p>
-          <div class="project-links">
-            <a href="https://victory-education.com" target="_blank" rel="noopener">Live Platform →</a>
-            <a href="https://github.com/sajjadkarimian/Moodle-Plugins" target="_blank" rel="noopener">Source Code →</a>
-          </div>
-        </article>
+          <article class="project" id="biotope" aria-labelledby="biotope-t">
+            <div class="project-head"><h3 id="biotope-t">BIOTOPE / iCHIS+: AI-assisted pneumonia triage</h3><span class="project-tag">UCD School of Medicine · Malawi · 2026</span></div>
+            <dl><dt>Problem</dt><dd>Community health workers in Malawi need to capture clinical data and identify children with pneumonia who are at serious risk of needing hospital care. The project uses a machine learning model built for this purpose.</dd><dt>What I did</dt><dd><ul><li>Deployed and configured a DHIS2 instance on AWS for data capture and integration of the prediction model.</li><li>Fixed DHIS2 metadata import problems with Python scripts that cleaned the configuration files.</li><li>Wrote a BABOK-structured business analysis document and defined deployment options for research, offline and online use.</li><li>Traced delays in the AI prediction workflow to their root causes.</li></ul></dd><dt>Now</dt><dd>Building an Apache Superset reporting dashboard that reads from DHIS2 and REDCap through their APIs.</dd></dl><div style="margin-bottom:1rem"><ul class="chips" aria-label="Tools and methods"><li>DHIS2</li><li>REDCap</li><li>Apache Superset</li><li>AWS Lightsail</li><li>Python</li></ul></div><div class="link-row"><a href="https://www.ucd.ie/medicine/news/2026/newucd-ledaitooloutperformsexistingmethodsforidentifyingseverechildhoodpneumonia/">UCD news about the BIOTOPE model</a></div>
+          </article>
 
-        <article class="item project-card">
-          <div class="kicker">Clinical Research Data Capture · Production</div>
-          <h3>REDCap Deployment on AWS</h3>
-          <p class="muted">
-            <strong>Need:</strong> A research team needed a secure, self-hosted platform to capture and manage study data.<br><br>
-            <strong>What I did:</strong> Provisioned and configured REDCap on AWS (Lightsail) — server and environment setup, application configuration, and user onboarding — selecting the right tool for the requirement rather than building from scratch.<br><br>
-            <strong>Outcome:</strong> A live REDCap instance in active use by research users to collect and manage data.
-          </p>
-          <p class="outcome-line">→ Live REDCap instance deployed on AWS and in active use</p>
-          <div class="project-links">
-            <a href="contact.html">Discuss This Work →</a>
-          </div>
-        </article>
+          <article class="project" id="victory" aria-labelledby="victory-t">
+            <div class="project-head"><h3 id="victory-t">VICTORY: digital health education platform</h3><span class="project-tag">UCD · partners in four countries · 2026</span></div>
+            <dl><dt>Problem</dt><dd>A healthcare education project needed a learning platform that partner universities could run and maintain.</dd><dt>What I did</dt><dd><ul><li>Acted as business analyst, working with stakeholders across four countries.</li><li>Led delivery of the production Moodle platform, from server setup to the learner experience.</li><li>Designed a custom Moodle plugin that groups enrolled courses by category, built without core changes so it survives upgrades.</li><li>Ran a usability evaluation with the System Usability Scale and prepared the ethics application for a usability study.</li></ul></dd><dt>Result</dt><dd>Live platform used by around 1,500 users.</dd></dl><div style="margin-bottom:1rem"><ul class="chips" aria-label="Tools and methods"><li>Moodle</li><li>Custom plugins</li><li>Requirements</li><li>SUS</li><li>Linux</li></ul></div><div class="link-row"><a href="https://victory-education.com">Live platform</a><a href="https://github.com/sajjadkarimian/Moodle-Plugins">Moodle plugins on GitHub</a></div>
+          </article>
 
-        <article class="item project-card">
-          <div class="kicker">Data Analysis · Python</div>
-          <h3>Housing Market Forecasting</h3>
-          <p class="muted">
-            Built forecasting models for house price and rent analysis in Python — data cleaning, exploratory analysis, feature engineering, statistical modelling, and visualisation — applied to real Irish housing-market data to surface trends and anomalies.
-          </p>
-          <div class="project-links">
-            <a href="contact.html">Request Details →</a>
-          </div>
-        </article>
+          <article class="project" id="redcap" aria-labelledby="redcap-t">
+            <div class="project-head"><h3 id="redcap-t">REDCap on AWS</h3><span class="project-tag">UCD · research data capture</span></div>
+            <dl><dt>Problem</dt><dd>Research teams needed a secure, self-hosted platform to capture and manage study data.</dd><dt>What I did</dt><dd>Installed REDCap on AWS Lightsail and maintain it: server and environment, application configuration, updates and user onboarding.</dd><dt>Result</dt><dd>A live REDCap instance used by research staff, including for data capture on the BIOTOPE project.</dd></dl><div style="margin-bottom:1rem"><ul class="chips" aria-label="Tools and methods"><li>REDCap</li><li>AWS Lightsail</li><li>Linux</li></ul></div>
+          </article>
 
-        <article class="item project-card">
-          <div class="kicker">ETL &amp; Visualisation · Python</div>
-          <h3>Dublin Bikes Data Pipeline</h3>
-          <p class="muted">
-            Built an end-to-end pipeline using the Dublin Bikes public API — automating collection, cleaning, transformation, and visualisation for exploratory analysis and reporting. The same data-flow logic that applies to clinical data.
-          </p>
-          <div class="project-links">
-            <a href="contact.html">Request Details →</a>
-          </div>
-        </article>
+          <article class="project" id="dental" aria-labelledby="dental-t">
+            <div class="project-head"><h3 id="dental-t">Dental image exchange and management system</h3><span class="project-tag">MSc thesis · Urmia, Iran · 2017 – 2020</span></div><p class="label-note">My role: requirements, design specifications, focus groups, user acceptance testing and evaluation.</p>
+            <dl><dt>Problem</dt><dd>Dental radiology images in Urmia's private sector were exchanged on film and paper. Patients carried images between radiology centres and dentists, and images were lost or damaged.</dd><dt>Stakeholders</dt><dd>Dentists, radiologists, radiology assistants and patients.</dd><dt>Elicitation</dt><dd>Semi-structured interviews and observation of how dentists order and review radiology exams. Requirements were ranked by how often users raised them.</dd><dt>Top requirements</dt><dd>Ease of use and a user-friendly interface first, followed by speed, security, communication, notifications and a mobile app.</dd><dt>Design</dt><dd>Use case diagrams and an entity-relationship diagram (ERD). Development was outsourced to a developer, working from these specifications.</dd><dt>Validation</dt><dd>A 10-person focus group reviewed the prototype over several rounds until users were satisfied. I then ran user acceptance testing and a formative evaluation in the first month of live use, followed by a questionnaire with 40 respondents.</dd><dt>Result</dt><dd>In the first month the system was used by 4 radiology centres, 9 dentists and 50 patients. 52.5% of users accessed it on a computer and 40% on a mobile phone. Users reported central image storage, fewer lost or damaged images and less radiation exposure for patients.</dd></dl><div style="margin-bottom:1rem"><ul class="chips" aria-label="Tools and methods"><li>Interviews</li><li>Observation</li><li>Use cases</li><li>ERD</li><li>Focus groups</li><li>UAT</li></ul></div><div class="link-row"><a href="https://doi.org/10.1002/hsr2.1760">Published in Health Science Reports, 2023</a></div>
+          </article>
 
+          <article class="project" id="st-james" aria-labelledby="st-james-t">
+            <div class="project-head"><h3 id="st-james-t">Clinical data flow and reporting analysis</h3><span class="project-tag">St James's Hospital · 2024 – 2025</span></div>
+            <dl><dt>Problem</dt><dd>Fragmented data collection and unclear reporting accountability, with gaps between what was recorded and what was clinically meaningful. The work included reporting of CPE (Carbapenemase-Producing Enterobacterales).</dd><dt>What I did</dt><dd>Elicited requirements from clinical and operational staff, mapped workflows and data flows across departments, and documented reporting standards.</dd><dt>Result</dt><dd>Workflow maps and structured outputs that showed where data quality broke down, used by senior clinical and operational stakeholders. Presented at HEPS 2025.</dd></dl>
+          </article>
+
+          <article class="project" id="rag" aria-labelledby="rag-t">
+            <div class="project-head"><h3 id="rag-t">Retrieval-augmented generation for a clinical use case</h3><span class="project-tag">UCD · in progress</span></div>
+            <dl><dt>What I am doing</dt><dd>Building a RAG system using open-source LLMs deployed on AWS, and evaluating models against each other. The use case is not public yet.</dd></dl><div style="margin-bottom:1rem"><ul class="chips" aria-label="Tools and methods"><li>RAG</li><li>Open-source LLMs</li><li>AWS</li><li>Python</li></ul></div>
+          </article>
       </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="other-title">
+      <div class="container">
+        <div class="section-head"><h2 id="other-title">Course, personal and research projects</h2><p>Work done to learn a method or answer a research question, labelled as such.</p></div>
+        <div class="grid-2">
+          <article class="card work-card">
+            <span class="tag">IBM Business Analyst capstone · fictional hospital</span>
+            <h3>HealthFirst Care: operational efficiency</h3>
+            <p>A full business analysis engagement for a fictional hospital with long waits and poor resource use: business requirements document, traceability matrix, stakeholder plan, BPMN and swimlane models, a KPI dashboard, and a risk register with 15 scored risks.</p>
+            <div class="stack"><ul class="chips" aria-label="Tools and methods"><li>BRD</li><li>RTM</li><li>BPMN</li><li>Risk register</li><li>Dashboard</li></ul>
+            <p style="margin:1rem 0 0"><a href="https://github.com/sajjadkarimian/Business_Analysis_IBM">View on GitHub<span class="visually-hidden">: HealthFirst Care capstone</span></a></p></div>
+          </article>
+          <article class="card work-card">
+            <span class="tag">Personal project · built with AI-assisted development</span>
+            <h3>LLM business analyst assistant</h3>
+            <p>A command-line tool that turns a business requirement into a user story, acceptance criteria and clarification questions, using a local model (Qwen3 8B on Ollama). Outputs are validated with Pydantic, saved as JSON with a human review status, and covered by pytest tests.</p>
+            <div class="stack"><ul class="chips" aria-label="Tools and methods"><li>Python</li><li>Ollama</li><li>Qwen3 8B</li><li>Pydantic</li><li>pytest</li></ul>
+            <p style="margin:1rem 0 0"><a href="https://github.com/sajjadkarimian/LLM-BA-Assistant">View on GitHub<span class="visually-hidden">: LLM business analyst assistant</span></a></p></div>
+          </article>
+          <article class="card work-card">
+            <span class="tag">Practice project · mock data</span>
+            <h3>API data collector</h3>
+            <p>A small ETL pipeline that pulls records from a REST API (JSONPlaceholder test data), cleans them and stores them in PostgreSQL without duplicates, with configuration in environment variables and pytest tests.</p>
+            <div class="stack"><ul class="chips" aria-label="Tools and methods"><li>Python</li><li>REST API</li><li>PostgreSQL</li><li>pytest</li></ul>
+            <p style="margin:1rem 0 0"><a href="https://github.com/sajjadkarimian/api-data-collector">View on GitHub<span class="visually-hidden">: API data collector</span></a></p></div>
+          </article>
+          <article class="card work-card">
+            <span class="tag">MSc by Research · UCD</span>
+            <h3>Ontologies for clinical data transparency</h3>
+            <p>Two ontologies that make data flows and accountability in clinical work explicit: Atlas, which extends socio-technical systems analysis with data provenance, and a SEIPS work system ontology. Both are applied in an infection prevention and control knowledge graph.</p>
+            <div class="stack"><ul class="chips" aria-label="Tools and methods"><li>OWL</li><li>PROV-O</li><li>SEIPS</li><li>Knowledge graph</li></ul>
+            <p class="link-row" style="margin:1rem 0 0"><a href="https://www.sjka.site/ontology/">Ontologies</a><a href="https://www.sjka.site/ontology/atlas/">Atlas</a><a href="https://www.sjka.site/ontology/seips/">SEIPS</a><a href="https://github.com/sajjadkarimian/ontology">GitHub</a></p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title" style="padding-top:0">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="cta-title">Working on a digital health or healthcare AI project?</h2>
+            <p>I am open to Business Analyst, Technical BA and AI implementation roles in digital health.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html">Get in touch</a>
+            <a class="btn btn-secondary" href="files/Sajjad_Karimian_CV.pdf">Download CV (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p style="margin:0">© 2026 Sajjad Karimian · Dublin, Ireland</p>
+      <ul>
+        <li><a href="mailto:sajjad.karimian94@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/sajjad-karimian">LinkedIn</a></li>
+        <li><a href="https://github.com/sajjadkarimian">GitHub</a></li>
+        <li><a href="files/Sajjad_Karimian_CV.pdf">CV (PDF)</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- Research Projects -->
-  <section>
-    <div class="container card section-card">
-      <div class="section-head">
-        <h2>Research Projects</h2>
-        <p class="muted">Research into healthcare data transparency, clinical AI adoption, and socio-technical systems — the analytical depth behind the applied work.</p>
-      </div>
-
-      <div class="grid-2">
-
-        <article class="item project-card">
-          <div class="kicker">Atlas Project · UCD Master's Research</div>
-          <h3>Clinical Data Transparency Ontology</h3>
-          <p class="muted">
-            <strong>Problem:</strong> Healthcare data lifecycles are opaque — it's often impossible to trace where a data point came from, who acted on it, or why it looks the way it does.<br><br>
-            <strong>Approach:</strong> Built an ontology using PROV-O and SEIPS to formally represent data provenance, actor accountability, and workflow context in clinical environments. Combined data flow diagrams, UML modelling, and data value mapping.<br><br>
-            <strong>Outcome:</strong> A structured, queryable model of how data moves and changes across clinical systems — making the invisible visible.
-          </p>
-          <p class="outcome-line">→ Produced a queryable provenance model making clinical data flows transparent and auditable</p>
-          <div class="project-links">
-            <a href="https://www.sjka.site/ontology/atlas/" target="_blank" rel="noopener">Ontology →</a>
-            <a href="https://sjka.site/ontology/ipc-dataset.html" target="_blank" rel="noopener">IPC Dataset →</a>
-          </div>
-        </article>
-
-        <article class="item project-card">
-          <div class="kicker">SEIPS Work System Project · UCD</div>
-          <h3>Healthcare Work System Ontology</h3>
-          <p class="muted">
-            <strong>Problem:</strong> AI systems in healthcare are often evaluated on technical performance alone, ignoring the work systems they are embedded in — the people, tasks, tools, and environments that determine whether a system succeeds or fails.<br><br>
-            <strong>Approach:</strong> Developed a formal ontology based on the SEIPS (Systems Engineering Initiative for Patient Safety) model to represent healthcare work systems and their socio-technical context around data use and AI adoption.<br><br>
-            <strong>Outcome:</strong> A reusable semantic model that supports systematic analysis of how AI interacts with clinical work — applicable to governance, procurement, and deployment evaluation.
-          </p>
-          <p class="outcome-line">→ Reusable semantic model applicable to AI governance, procurement, and deployment evaluation</p>
-          <div class="project-links">
-            <a href="https://www.sjka.site/ontology/seips/" target="_blank" rel="noopener">Ontology →</a>
-          </div>
-        </article>
-
-        <article class="item project-card">
-          <div class="kicker">Industrial Placement · St. James's Hospital Dublin</div>
-          <h3>Clinical Data Flow Mapping &amp; Governance</h3>
-          <p class="muted">
-            <strong>Problem:</strong> A major acute hospital had fragmented data collection, unclear reporting accountability, and gaps between what was recorded and what was clinically meaningful.<br><br>
-            <strong>Approach:</strong> Analysed data collection and quality-management practices across hospital departments. Mapped data flows, identified governance gaps, and documented reporting standards for clinical and senior operational stakeholders.<br><br>
-            <strong>Outcome:</strong> Structured outputs and workflow maps that surfaced systemic data-quality issues — and informed how similar problems could be addressed at a design level, not just operationally.
-          </p>
-          <p class="outcome-line">→ Outputs and workflow maps used by senior clinical and operational stakeholders</p>
-          <div class="project-links">
-            <a href="contact.html">Discuss This Work →</a>
-          </div>
-        </article>
-
-        <article class="item project-card">
-          <div class="kicker">ID4AI Project · UCD</div>
-          <h3>Inclusive Design for Healthcare AI</h3>
-          <p class="muted">
-            <strong>Problem:</strong> AI systems in healthcare are frequently designed without meaningful input from the people who will use them — leading to poor adoption, workarounds, and outcomes that fall short of expectations.<br><br>
-            <strong>Approach:</strong> Contributing to research on inclusive design principles for healthcare AI — examining how AI systems can be designed to serve diverse clinical users, with attention to transparency, adoption, and human-centred deployment.<br><br>
-            <strong>Outcome:</strong> Ongoing research outputs and frameworks supporting responsible AI adoption in clinical settings.
-          </p>
-          <p class="outcome-line">→ Ongoing: contributing to human-centred frameworks for clinical AI adoption</p>
-          <div class="project-links">
-            <a href="contact.html">Discuss This Work →</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container card footer-card">
-    <div>© 2026 Sajjad Karimian</div>
-    <div><a href="mailto:sajjad.karimian94@gmail.com">sajjad.karimian94@gmail.com</a></div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
